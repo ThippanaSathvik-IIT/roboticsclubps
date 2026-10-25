@@ -67,13 +67,33 @@ ros2 topic echo /odom --once
 
 ## Test notes
 
-I still need to run and record a clean test of this version. The things to record are:
+I tested the code in Gazebo using the TurtleBot3 Burger robot. I started the robot close to (0, 0) and let it move until the IMU-estimated distance reached 10 m.
 
-- Starting odometry position: ______
-- Final odometry position: ______
-- IMU estimate when it stopped: ______
-- Actual displacement based on odometry: ______
-- Difference between the target (10 m) and actual displacement: ______
+These are the readings I got:
+
+Starting odometry position: (0.000062, -0.00000456)
+
+Final odometry position: (4.603687, -0.00009509)
+
+IMU estimate when it stopped: 10.03 m
+
+Actual displacement based on odometry: 4.6036 m
+
+Difference between IMU estimate and odometry: 5.4264 m
+
+Difference between the 10 m target and actual displacement: 5.3964 m
+
+Error relative to the target: 53.96%
+
+What happened
+
+The robot stopped when the estimated distance reached 10.03 m, so the stopping condition worked as expected.
+
+But when I checked the odometry, the robot had actually travelled only around 4.6 m. The difference was much larger than I initially expected.
+
+I think the main issue is the double integration of acceleration. Small errors in the IMU readings keep accumulating, and that affects the final position estimate quite a lot.
+
+For now, the basic stopping logic works, but the distance estimation needs improvement. I would probably try accelerometer bias correction or some filtering method if I were to work on this further.
 
 ## What I would improve
 
