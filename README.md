@@ -1,4 +1,4 @@
-# IMU Distance Stopper
+<img width="1600" height="895" alt="image_2" src="https://github.com/user-attachments/assets/acb975b0-47db-4a67-9d80-841b18df5c4c" /># IMU Distance Stopper
 
 This is a small ROS 2 Python project. The idea is to move a robot forward in Gazebo and stop it once the distance **estimated from the IMU** reaches 10 metres.
 
@@ -96,9 +96,14 @@ I think the main issue is the double integration of acceleration. Small errors i
 For now, the basic stopping logic works, but the distance estimation needs improvement. I would probably try accelerometer bias correction or some filtering method if I were to work on this further.
 
 ## What I would improve
-<img width="1600" height="832" alt="image_1" src="https://github.com/user-attachments/assets/3426b179-6937-4045-9a17-c91914e842d4" />
+
 
 
 The code uses basic numerical integration and doesn't estimate or remove accelerometer bias. Small errors build up after integrating twice. It also only uses yaw for the acceleration rotation, which is a simplification suitable for a flat-ground experiment, not a full 3D solution. Better calibration and orientation handling would be worth trying next.
 
 This is a basic experiment, not an accurate localization system.
+<img width="1600" height="832" alt="image1" src="https://github.com/user-attachments/assets/3426b179-6937-4045-9a17-c91914e842d4" />
+
+<img width="1600" height="895" alt="image2" src="https://github.com/user-attachments/assets/bada9f24-9b4f-4917-9e27-f04dfcb7a5d4" />
+
+<img width="1600" height="851" alt="image3" src="https://github.com/user-attachments/assets/45d15fab-875c-4e3a-b8c7-2fe786e49df5" />.
