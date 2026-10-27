@@ -104,6 +104,6 @@ The code uses basic numerical integration and doesn't estimate or remove acceler
 This is a basic experiment, not an accurate localization system.
 <img width="1600" height="832" alt="image1" src="https://github.com/user-attachments/assets/3426b179-6937-4045-9a17-c91914e842d4" />
 
-<img width="1600" height="895" alt="image2" src="https://github.com/user-attachments/assets/bada9f24-9b4f-4917-9e27-f04dfcb7a5d4" />
+<img width="1600" height="851" alt="image2" src="https://github.com/user-attachments/assets/45d15fab-875c-4e3a-b8c7-2fe786e49df5" />
 
-<img width="1600" height="851" alt="image3" src="https://github.com/user-attachments/assets/45d15fab-875c-4e3a-b8c7-2fe786e49df5" />.
+<img width="1600" height="895" alt="image3" src="https://github.com/user-attachments/assets/bada9f24-9b4f-4917-9e27-f04dfcb7a5d4" />.
