@@ -1,4 +1,4 @@
-<img width="1600" height="895" alt="image_2" src="https://github.com/user-attachments/assets/acb975b0-47db-4a67-9d80-841b18df5c4c" /># IMU Distance Stopper
+# IMU Distance Stopper
 
 This is a small ROS 2 Python project. The idea is to move a robot forward in Gazebo and stop it once the distance **estimated from the IMU** reaches 10 metres.
 
