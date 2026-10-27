@@ -96,6 +96,8 @@ I think the main issue is the double integration of acceleration. Small errors i
 For now, the basic stopping logic works, but the distance estimation needs improvement. I would probably try accelerometer bias correction or some filtering method if I were to work on this further.
 
 ## What I would improve
+<img width="1600" height="832" alt="image_1" src="https://github.com/user-attachments/assets/3426b179-6937-4045-9a17-c91914e842d4" />
+
 
 The code uses basic numerical integration and doesn't estimate or remove accelerometer bias. Small errors build up after integrating twice. It also only uses yaw for the acceleration rotation, which is a simplification suitable for a flat-ground experiment, not a full 3D solution. Better calibration and orientation handling would be worth trying next.
 
